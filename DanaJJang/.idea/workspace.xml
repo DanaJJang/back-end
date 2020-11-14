@@ -23,6 +23,26 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -38,6 +58,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../git syxxn/Toy-Project/board" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
@@ -68,6 +94,14 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="457" y="227" key="#com.intellij.ide.util.MemberChooser" timestamp="1605347479831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="457" y="227" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605347479831" />
+    <state x="203" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605346998079">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="203" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605346998079" />
     <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1605342029186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
