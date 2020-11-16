@@ -2,6 +2,8 @@ package com.github.syxxn.DanaJJang;
 
 import com.github.syxxn.DanaJJang.entity.folder.Folder;
 import com.github.syxxn.DanaJJang.entity.folder.FolderRepository;
+import com.github.syxxn.DanaJJang.entity.word.Word;
+import com.github.syxxn.DanaJJang.entity.word.WordRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,6 +32,9 @@ public class FolderControllerTest {
     @Autowired
     private FolderRepository folderRepository;
 
+    @Autowired
+    private WordRepository wordRepository;
+
     private MockMvc mvc;
 
     @Before
@@ -46,13 +51,7 @@ public class FolderControllerTest {
         folderRepository.save(
                 Folder.builder()
                         .id(2)
-                        .name("first")
-                        .build()
-        );
-        folderRepository.save(
-                Folder.builder()
-                        .id(3)
-                        .name("first")
+                        .name("second")
                         .build()
         );
     }
@@ -63,13 +62,20 @@ public class FolderControllerTest {
     }
 
     @Test
-    public void getFolder() throws  Exception{
+    public void getFolder() throws  Exception {
         mvc.perform(get("/folder")).andDo(print())
                 .andExpect(status().isOk()).andDo(print());
     }
 
     @Test
-    public void setName() throws Exception{
+    public void getWord() throws Exception {
+        addWord(1);
+        mvc.perform(get("/folder/1")).andDo(print())
+                .andExpect(status().isOk()).andDo(print());
+    }
+
+    @Test
+    public void setName() throws Exception {
         int folderId = createFolder(1);
 
         mvc.perform(put("/folder/"+folderId)
@@ -87,5 +93,14 @@ public class FolderControllerTest {
         ).getId();
     }
 
+    private Integer addWord(Integer folderId){
+        return wordRepository.save(
+                Word.builder()
+                        .folderId(folderId)
+                        .english("hello")
+                        .korean("hello")
+                        .build()
+        ).getId();
+    }
 
 }
