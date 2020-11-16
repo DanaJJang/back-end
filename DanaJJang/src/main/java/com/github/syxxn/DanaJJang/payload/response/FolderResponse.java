@@ -9,6 +9,6 @@ public class FolderResponse {
 
     private String name;
 
-    private Integer totalWords;
+//    private Integer word;
 
 }

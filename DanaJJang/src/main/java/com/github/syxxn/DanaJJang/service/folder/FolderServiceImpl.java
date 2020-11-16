@@ -2,6 +2,8 @@ package com.github.syxxn.DanaJJang.service.folder;
 
 import com.github.syxxn.DanaJJang.entity.folder.Folder;
 import com.github.syxxn.DanaJJang.entity.folder.FolderRepository;
+import com.github.syxxn.DanaJJang.entity.word.Word;
+import com.github.syxxn.DanaJJang.entity.word.WordRepository;
 import com.github.syxxn.DanaJJang.exception.FolderNotFoundException;
 import com.github.syxxn.DanaJJang.payload.response.FolderListResponse;
 import com.github.syxxn.DanaJJang.payload.response.FolderResponse;
@@ -12,12 +14,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class FolderServiceImpl implements FolderService{
 
     private final FolderRepository folderRepository;
+    private final WordRepository wordRepository;
 
     @Override
     public FolderListResponse getFolder(Pageable page) {
@@ -29,13 +33,11 @@ public class FolderServiceImpl implements FolderService{
             folderResponses.add(
                     FolderResponse.builder()
                             .name(folder.getName())
-                            .totalWords()
                             .build()
             );
         }
 
         return FolderListResponse.builder()
-                .totalElements((int)folderPage.getTotalElements())
                 .folderResponses(folderResponses)
                 .build();
     }

@@ -1,6 +1,5 @@
 package com.github.syxxn.DanaJJang;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.syxxn.DanaJJang.entity.folder.Folder;
 import com.github.syxxn.DanaJJang.entity.folder.FolderRepository;
 import org.junit.After;
@@ -16,7 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -38,6 +37,24 @@ public class FolderControllerTest {
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
                 .build();
+        folderRepository.save(
+                Folder.builder()
+                        .id(1)
+                        .name("first")
+                        .build()
+        );
+        folderRepository.save(
+                Folder.builder()
+                        .id(2)
+                        .name("first")
+                        .build()
+        );
+        folderRepository.save(
+                Folder.builder()
+                        .id(3)
+                        .name("first")
+                        .build()
+        );
     }
 
     @After
@@ -47,27 +64,28 @@ public class FolderControllerTest {
 
     @Test
     public void getFolder() throws  Exception{
-
+        mvc.perform(get("/folder")).andDo(print())
+                .andExpect(status().isOk()).andDo(print());
     }
 
     @Test
     public void setName() throws Exception{
+        int folderId = createFolder(1);
 
-        int folderId = createFolder("기말고사");
-
-        mvc.perform(patch("/team/"+folderId)
-                .param("중간고사")
+        mvc.perform(put("/folder/"+folderId)
+                .param("name","중간고사")
                 .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk()).andDo(print());
-
     }
 
-    public Integer createFolder(String name){
+    private Integer createFolder(Integer id) {
         return folderRepository.save(
                 Folder.builder()
-                        .name(name)
-                .build()
+                        .id(id)
+                        .name("first")
+                        .build()
         ).getId();
     }
+
 
 }

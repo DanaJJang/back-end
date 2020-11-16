@@ -9,8 +9,6 @@ import java.util.List;
 @Builder
 public class FolderListResponse {
 
-    private int totalElements;
-
     private List folderResponses;
 
 }
