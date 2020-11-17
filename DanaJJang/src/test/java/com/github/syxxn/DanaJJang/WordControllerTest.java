@@ -44,12 +44,6 @@ public class WordControllerTest {
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
                 .build();
-        folderRepository.save(
-                Folder.builder()
-                        .id(1)
-                        .name("first")
-                        .build()
-        );
     }
 
     @After
@@ -60,11 +54,8 @@ public class WordControllerTest {
 
     @Test
     public void addWord() throws Exception {
-        WordRequest request = WordRequest.builder()
-                .folderId(addFolder())
-                .english("haha")
-                .korean("haha")
-                .build();
+        int folderId = addFolder();
+        WordRequest request = new WordRequest(folderId,"hi","hi");
 
         mvc.perform(post("/word")
                 .content(new ObjectMapper().writeValueAsString(request))

@@ -24,20 +24,19 @@ public class WordServiceImpl implements WordService{
         Folder folder = folderRepository.findById(wordRequest.getFolderId())
                 .orElseThrow(FolderNotFoundException::new);
 
-        Word word = wordRepository.findByEnglish(wordRequest.getEnglish())
-                .orElseThrow(WordAlreadyExistsException::new);
+        wordRepository.findByEnglishAndKorean(wordRequest.getEnglish(),wordRequest.getKorean())
+                .ifPresent(w->{ throw new WordAlreadyExistsException(); });
 
-        wordRepository.save(word.word());
+        //단어 개수 추가 .word()
 
         wordRepository.save(
                 Word.builder()
                         .folderId(folder.getId())
                         .english(wordRequest.getEnglish())
                         .korean(wordRequest.getKorean())
-                        .number(word.getNumber())
+                        //.number(word.getNumber())
                 .build()
         );
-
     }
 
     @Override

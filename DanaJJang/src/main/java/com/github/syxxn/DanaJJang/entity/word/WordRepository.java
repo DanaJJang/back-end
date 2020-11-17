@@ -10,5 +10,5 @@ import java.util.Optional;
 public interface WordRepository extends CrudRepository<Word,Integer> {
     List<Word> findAllByFolderId(Integer id);
     //단어 중복확인
-    Optional<Word> findByEnglish(String english);
+    Optional<Word> findByEnglishAndKorean(String english, String korean);
 }

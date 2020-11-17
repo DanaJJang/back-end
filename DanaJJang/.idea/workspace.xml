@@ -24,6 +24,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/entity/word/WordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/entity/word/WordRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/exception/WordAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/exception/WordAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/payload/request/WordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/payload/request/WordRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/service/word/WordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/service/word/WordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/syxxn/DanaJJang/WordControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/syxxn/DanaJJang/WordControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +150,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordControllerTest.addWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DanaJJang.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.syxxn.DanaJJang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.syxxn.DanaJJang" />
+      <option name="MAIN_CLASS_NAME" value="com.github.syxxn.DanaJJang.WordControllerTest" />
+      <option name="METHOD_NAME" value="addWord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DanaJJangApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="DanaJJang.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.syxxn.DanaJJang.DanaJJangApplication" />
@@ -155,6 +176,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WordControllerTest" />
+        <item itemvalue="JUnit.WordControllerTest.addWord" />
         <item itemvalue="JUnit.FolderControllerTest" />
         <item itemvalue="JUnit.FolderControllerTest.setName" />
         <item itemvalue="Gradle.WordControllerTest" />
@@ -174,7 +196,7 @@
       <workItem from="1605341190409" duration="1331000" />
       <workItem from="1605447080476" duration="3911000" />
       <workItem from="1605517657859" duration="11313000" />
-      <workItem from="1605568194941" duration="6293000" />
+      <workItem from="1605568194941" duration="11701000" />
     </task>
     <servers />
   </component>
@@ -218,22 +240,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605568599028" />
-    <state width="914" height="386" key="GridCell.Tab.0.bottom" timestamp="1605598552309">
+    <state width="901" height="345" key="GridCell.Tab.0.bottom" timestamp="1605608955244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="386" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605598552309" />
-    <state width="914" height="386" key="GridCell.Tab.0.center" timestamp="1605598552309">
+    <state width="901" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
+    <state width="901" height="345" key="GridCell.Tab.0.center" timestamp="1605608955244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="386" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605598552309" />
-    <state width="914" height="386" key="GridCell.Tab.0.left" timestamp="1605598552309">
+    <state width="901" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
+    <state width="901" height="345" key="GridCell.Tab.0.left" timestamp="1605608955244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="386" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605598552309" />
-    <state width="914" height="386" key="GridCell.Tab.0.right" timestamp="1605598552309">
+    <state width="901" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
+    <state width="901" height="345" key="GridCell.Tab.0.right" timestamp="1605608955244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="386" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605598552309" />
+    <state width="901" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
     <state x="0" y="168" key="SettingsEditor" timestamp="1605528398315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
