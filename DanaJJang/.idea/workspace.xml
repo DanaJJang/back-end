@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="512fd23c-1965-4b2a-bab8-8a04c9284579" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/entity/word/WordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/entity/word/WordRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/exception/WordAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/exception/WordAlreadyExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/payload/request/WordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/payload/request/WordRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/service/word/WordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/service/word/WordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/syxxn/DanaJJang/WordControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/syxxn/DanaJJang/WordControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../user_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/service" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,6 +78,15 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang\service" />
+      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang\payload\request" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang\exception" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.WordControllerTest">
     <configuration name="WordControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -196,7 +200,8 @@
       <workItem from="1605341190409" duration="1331000" />
       <workItem from="1605447080476" duration="3911000" />
       <workItem from="1605517657859" duration="11313000" />
-      <workItem from="1605568194941" duration="11701000" />
+      <workItem from="1605568194941" duration="13875000" />
+      <workItem from="1605672101502" duration="5297000" />
     </task>
     <servers />
   </component>
@@ -236,26 +241,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1170" y="270" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605531314828" />
-    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1605568599028">
+    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1605693185527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605568599028" />
-    <state width="901" height="345" key="GridCell.Tab.0.bottom" timestamp="1605608955244">
+    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605693185527" />
+    <state width="893" height="256" key="GridCell.Tab.0.bottom" timestamp="1605611321018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
-    <state width="901" height="345" key="GridCell.Tab.0.center" timestamp="1605608955244">
+    <state width="893" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605611321018" />
+    <state width="893" height="256" key="GridCell.Tab.0.center" timestamp="1605611321017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
-    <state width="901" height="345" key="GridCell.Tab.0.left" timestamp="1605608955244">
+    <state width="893" height="256" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605611321017" />
+    <state width="893" height="256" key="GridCell.Tab.0.left" timestamp="1605611321017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
-    <state width="901" height="345" key="GridCell.Tab.0.right" timestamp="1605608955244">
+    <state width="893" height="256" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605611321017" />
+    <state width="893" height="256" key="GridCell.Tab.0.right" timestamp="1605611321017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="901" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605608955244" />
+    <state width="893" height="256" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605611321017" />
     <state x="0" y="168" key="SettingsEditor" timestamp="1605528398315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
