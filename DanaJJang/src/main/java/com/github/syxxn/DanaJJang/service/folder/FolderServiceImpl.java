@@ -2,13 +2,16 @@ package com.github.syxxn.DanaJJang.service.folder;
 
 import com.github.syxxn.DanaJJang.entity.folder.Folder;
 import com.github.syxxn.DanaJJang.entity.folder.FolderRepository;
+import com.github.syxxn.DanaJJang.entity.user.UserRepository;
 import com.github.syxxn.DanaJJang.entity.word.Word;
 import com.github.syxxn.DanaJJang.entity.word.WordRepository;
 import com.github.syxxn.DanaJJang.exception.FolderNotFoundException;
+import com.github.syxxn.DanaJJang.exception.UserNotFoundException;
 import com.github.syxxn.DanaJJang.payload.response.FolderListResponse;
 import com.github.syxxn.DanaJJang.payload.response.FolderResponse;
 import com.github.syxxn.DanaJJang.payload.response.WordListResponse;
 import com.github.syxxn.DanaJJang.payload.response.WordResponse;
+import com.github.syxxn.DanaJJang.security.auth.AuthenticationFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -22,11 +25,16 @@ import java.util.List;
 public class FolderServiceImpl implements FolderService{
 
     private final FolderRepository folderRepository;
-
     private final WordRepository wordRepository;
+    private final UserRepository userRepository;
+    private final AuthenticationFacade authenticationFacade;
 
     @Override
     public FolderListResponse getFolder(Pageable page) {
+
+        userRepository.findByUserId(authenticationFacade.getUserId())
+                .orElseThrow(UserNotFoundException::new);
+
         Page<Folder> folderPage = folderRepository.findAllBy(page);
 
         List<FolderResponse> folderResponses = new ArrayList<>();
@@ -35,6 +43,7 @@ public class FolderServiceImpl implements FolderService{
             folderResponses.add(
                     FolderResponse.builder()
                             .name(folder.getName())
+                            .wordNumber(wordRepository.countAllById(folder.getId()))
                             .build()
             );
         }
@@ -46,6 +55,9 @@ public class FolderServiceImpl implements FolderService{
 
     @Override
     public WordListResponse getWord(Integer folderId){
+
+        userRepository.findByUserId(authenticationFacade.getUserId())
+                .orElseThrow(UserNotFoundException::new);
 
         folderRepository.findById(folderId)
                 .orElseThrow(FolderNotFoundException::new);
@@ -68,6 +80,10 @@ public class FolderServiceImpl implements FolderService{
 
     @Override
     public void setName(Integer folderId, String name) {
+
+        userRepository.findByUserId(authenticationFacade.getUserId())
+                .orElseThrow(UserNotFoundException::new);
+
         Folder folder = folderRepository.findById(folderId)
                 .orElseThrow(FolderNotFoundException::new);
 

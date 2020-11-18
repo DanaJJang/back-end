@@ -3,6 +3,8 @@ package com.github.syxxn.DanaJJang;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.syxxn.DanaJJang.entity.folder.Folder;
 import com.github.syxxn.DanaJJang.entity.folder.FolderRepository;
+import com.github.syxxn.DanaJJang.entity.user.User;
+import com.github.syxxn.DanaJJang.entity.user.UserRepository;
 import com.github.syxxn.DanaJJang.entity.word.Word;
 import com.github.syxxn.DanaJJang.entity.word.WordRepository;
 import com.github.syxxn.DanaJJang.payload.request.WordRequest;
@@ -13,6 +15,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -37,6 +41,12 @@ public class WordControllerTest {
     @Autowired
     private WordRepository wordRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     private MockMvc mvc;
 
     @Before
@@ -44,6 +54,13 @@ public class WordControllerTest {
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
                 .build();
+
+        userRepository.save(
+                User.builder()
+                        .userId("testId")
+                        .password(passwordEncoder.encode("testPassword"))
+                        .build()
+        );
     }
 
     @After
@@ -53,6 +70,7 @@ public class WordControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testId",password = "testPassword")
     public void addWord() throws Exception {
         int folderId = addFolder();
         WordRequest request = new WordRequest(folderId,"hi","hi");
@@ -64,6 +82,7 @@ public class WordControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testId",password = "testPassword")
     public void modifyWord() throws Exception{
         Integer wordId = addWord(1);
 
@@ -75,6 +94,7 @@ public class WordControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testId",password = "testPassword")
     public void deleteWord() throws Exception{
         Integer wordId = addWord(1);
 

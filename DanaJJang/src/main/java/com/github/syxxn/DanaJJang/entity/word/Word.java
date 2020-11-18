@@ -27,17 +27,9 @@ public class Word {
     @Column(nullable = false)
     private Integer folderId;
 
-    private Integer number;
-
-
     @ManyToOne
     @JoinColumn(name = "folder")
     private Folder folder;
-
-    public Word word(){
-        this.number++;
-        return this;
-    }
 
     public void modifyWord(String english, String korean){
         this.english = english;

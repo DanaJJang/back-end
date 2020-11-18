@@ -11,4 +11,6 @@ public class FolderListResponse {
 
     private List folderResponses;
 
+    private Integer wordNumber;
+
 }

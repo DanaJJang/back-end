@@ -15,7 +15,7 @@ public class UserControllder {
 
     private final UserService userService;
 
-    @PostMapping("/user")
+    @PostMapping
     public void signUp(@RequestBody SignUpRequest signUpRequest){
         userService.signUp(signUpRequest);
     }

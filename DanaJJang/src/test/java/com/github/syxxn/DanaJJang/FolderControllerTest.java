@@ -2,6 +2,8 @@ package com.github.syxxn.DanaJJang;
 
 import com.github.syxxn.DanaJJang.entity.folder.Folder;
 import com.github.syxxn.DanaJJang.entity.folder.FolderRepository;
+import com.github.syxxn.DanaJJang.entity.user.User;
+import com.github.syxxn.DanaJJang.entity.user.UserRepository;
 import com.github.syxxn.DanaJJang.entity.word.Word;
 import com.github.syxxn.DanaJJang.entity.word.WordRepository;
 import org.junit.After;
@@ -11,6 +13,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -30,10 +34,16 @@ public class FolderControllerTest {
     private WebApplicationContext context;
 
     @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
     private FolderRepository folderRepository;
 
     @Autowired
     private WordRepository wordRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     private MockMvc mvc;
 
@@ -42,6 +52,13 @@ public class FolderControllerTest {
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
                 .build();
+
+        userRepository.save(
+                User.builder()
+                        .userId("testId")
+                        .password(passwordEncoder.encode("testPassword"))
+                        .build()
+        );
         folderRepository.save(
                 Folder.builder()
                         .id(1)
@@ -62,12 +79,14 @@ public class FolderControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testId",password = "testPassword")
     public void getFolder() throws  Exception {
         mvc.perform(get("/folder")).andDo(print())
                 .andExpect(status().isOk()).andDo(print());
     }
 
     @Test
+    @WithMockUser(username = "testId",password = "testPassword")
     public void getWord() throws Exception {
         addWord(1);
         mvc.perform(get("/folder/1")).andDo(print())
@@ -75,6 +94,7 @@ public class FolderControllerTest {
     }
 
     @Test
+    @WithMockUser(username = "testId",password = "testPassword")
     public void setName() throws Exception {
         int folderId = createFolder(1);
 
