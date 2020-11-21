@@ -12,7 +12,6 @@ import java.util.List;
 @Entity
 @Builder
 @Getter
-@Table(name="Folder")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Folder {
