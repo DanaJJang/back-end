@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles({"test", "local"})
 public class UserControllerTest {
 
     @Autowired
