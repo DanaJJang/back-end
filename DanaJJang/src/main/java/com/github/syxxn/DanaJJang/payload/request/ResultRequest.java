@@ -1,11 +1,11 @@
-package com.github.syxxn.DanaJJang.payload.response;
+package com.github.syxxn.DanaJJang.payload.request;
 
 import lombok.Builder;
 import lombok.Getter;
 
-@Builder
 @Getter
-public class ResultResponse {
+@Builder
+public class ResultRequest {
 
     private Integer resultListId;
 
