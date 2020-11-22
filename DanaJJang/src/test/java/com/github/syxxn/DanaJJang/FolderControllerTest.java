@@ -75,7 +75,9 @@ public class FolderControllerTest {
 
     @After
     public void deleteAll(){
+        userRepository.deleteAll();
         folderRepository.deleteAll();;
+        wordRepository.deleteAll();;
     }
 
     @Test

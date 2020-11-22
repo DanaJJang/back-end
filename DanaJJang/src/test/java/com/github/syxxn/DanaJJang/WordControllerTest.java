@@ -65,6 +65,7 @@ public class WordControllerTest {
 
     @After
     public void deleteAll(){
+        userRepository.deleteAll();
         folderRepository.deleteAll();;
         wordRepository.deleteAll();
     }
