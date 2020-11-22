@@ -1,3 +1,4 @@
+/*
 package com.github.syxxn.DanaJJang.config.redis;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -28,3 +29,4 @@ public class EmbeddedRedisConfig {
     }
 
 }
+*/
