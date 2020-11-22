@@ -9,6 +9,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 @AllArgsConstructor
 @NoArgsConstructor
 public class SignInRequest {
+
     private String userId;
     private String password;
 

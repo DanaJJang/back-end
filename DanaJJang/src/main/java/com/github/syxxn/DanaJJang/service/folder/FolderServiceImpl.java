@@ -35,6 +35,8 @@ public class FolderServiceImpl implements FolderService{
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 
+        //page 값이 없는 경우에는?
+
         Page<Folder> folderPage = folderRepository.findAllBy(page);
 
         List<FolderResponse> folderResponses = new ArrayList<>();
