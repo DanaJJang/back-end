@@ -22,7 +22,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        super.configure(http);
         http
                 .csrf().disable()
                 .cors().and()
@@ -30,6 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST,"/user").permitAll()
+                //permitAll이 안되어있는데 객체가 없으면 403
                 .antMatchers(HttpMethod.POST,"/auth").permitAll()
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));

@@ -5,13 +5,16 @@ import com.github.syxxn.DanaJJang.entity.user.UserRepository;
 import com.github.syxxn.DanaJJang.exception.UserAlreadyExistsException;
 import com.github.syxxn.DanaJJang.payload.request.SignUpRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService{
 
-    public final UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+
     @Override
     public void signUp(SignUpRequest signUpRequest){
         String id = signUpRequest.getUserId();
@@ -24,10 +27,8 @@ public class UserServiceImpl implements UserService{
         userRepository.save(
                 User.builder()
                         .userId(id)
-                        .password(password)
+                        .password(passwordEncoder.encode(password))
                 .build()
         );
-
-
     }
 }

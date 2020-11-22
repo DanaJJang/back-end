@@ -13,8 +13,6 @@ import com.github.syxxn.DanaJJang.service.refreshtoken.RefreshTokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -38,11 +36,6 @@ public class AuthServiceImpl implements AuthService{
       return userRepository.findByUserId(signInRequest.getUserId())
               .filter(user -> passwordEncoder.matches(signInRequest.getPassword(), user.getPassword()))
               .map(user -> {
-                 try {
-                    authenticationManager.authenticate(signInRequest.getAuthToken(user.getUserId()));
-                 } catch (AuthenticationException e) {
-                    throw new BadCredentialsException(e.getLocalizedMessage());
-                 }
                  String accessToken = tokenProvider.generateAccessToken(user.getUserId());
                  String refreshToken = tokenProvider.generateRefreshToken(user.getUserId());
                  refreshTokenService.save(new RefreshToken(user.getUserId(), refreshToken, refreshExp));
