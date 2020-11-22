@@ -1,7 +1,11 @@
 package com.github.syxxn.DanaJJang.config;
 
+import com.github.syxxn.DanaJJang.security.JwtConfigurer;
+import com.github.syxxn.DanaJJang.security.JwtTokenProvider;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -11,11 +15,24 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    private final JwtTokenProvider jwtTokenProvider;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
+        http
+                .csrf().disable()
+                .cors().and()
+                .sessionManagement().disable()
+                .formLogin().disable()
+                .authorizeRequests()
+                .antMatchers(HttpMethod.POST,"/user").permitAll()
+                .antMatchers(HttpMethod.POST,"/auth").permitAll()
+                .and()
+                .apply(new JwtConfigurer(jwtTokenProvider));
     }
 
     @Bean
