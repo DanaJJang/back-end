@@ -90,35 +90,35 @@ public class FolderControllerTest {
     @Test
     @WithMockUser(username = "testId",password = "testPassword")
     public void getWord() throws Exception {
-        addWord(1);
-        mvc.perform(get("/folder/1")).andDo(print())
+        Folder folder = createFolder();
+        addWord(folder);
+        mvc.perform(get("/folder/" + folder.getId())).andDo(print())
                 .andExpect(status().isOk()).andDo(print());
     }
 
     @Test
     @WithMockUser(username = "testId",password = "testPassword")
     public void setName() throws Exception {
-        int folderId = createFolder(1);
+        Folder folder = createFolder();
 
-        mvc.perform(put("/folder/"+folderId)
+        mvc.perform(put("/folder/"+folder.getId())
                 .param("name","중간고사")
                 .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk()).andDo(print());
     }
 
-    private Integer createFolder(Integer id) {
+    private Folder createFolder() {
         return folderRepository.save(
                 Folder.builder()
-                        .id(id)
                         .name("first")
                         .build()
-        ).getId();
+        );
     }
 
-    private Integer addWord(Integer folderId){
+    private Integer addWord(Folder folder){
         return wordRepository.save(
                 Word.builder()
-                        .folderId(folderId)
+                        .folder(folder)
                         .english("hello")
                         .korean("hello")
                         .build()

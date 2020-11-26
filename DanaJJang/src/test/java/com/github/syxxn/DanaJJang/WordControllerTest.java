@@ -73,8 +73,8 @@ public class WordControllerTest {
     @Test
     @WithMockUser(username = "testId",password = "testPassword")
     public void addWord() throws Exception {
-        int folderId = addFolder();
-        WordRequest request = new WordRequest(folderId,"hi","hi");
+        Folder folder = createFolder();
+        WordRequest request = new WordRequest(folder.getId(),"hi","hi");
 
         mvc.perform(post("/word")
                 .content(new ObjectMapper().writeValueAsString(request))
@@ -85,7 +85,8 @@ public class WordControllerTest {
     @Test
     @WithMockUser(username = "testId",password = "testPassword")
     public void modifyWord() throws Exception{
-        Integer wordId = addWord(1);
+        Folder folder = createFolder();
+        Integer wordId = addWord(folder);
 
         mvc.perform(put("/word/"+wordId)
                 .param("english","hi")
@@ -97,24 +98,25 @@ public class WordControllerTest {
     @Test
     @WithMockUser(username = "testId",password = "testPassword")
     public void deleteWord() throws Exception{
-        Integer wordId = addWord(1);
+        Folder folder = createFolder();
+        Integer wordId = addWord(folder);
 
         mvc.perform(delete("/word/"+wordId))
                 .andExpect(status().isOk()).andDo(print());
     }
 
-    private Integer addFolder() {
+    private Folder createFolder() {
         return folderRepository.save(
                 Folder.builder()
                         .name("first")
                         .build()
-        ).getId();
+        );
     }
 
-    private Integer addWord(Integer folderId) {
+    private Integer addWord(Folder folder){
         return wordRepository.save(
                 Word.builder()
-                        .folderId(folderId)
+                        .folder(folder)
                         .english("hello")
                         .korean("hello")
                         .build()

@@ -24,11 +24,8 @@ public class Word {
     @Column(nullable = false, length = 45)
     private String korean;
 
-    @Column(nullable = false)
-    private Integer folderId;
-
     @ManyToOne
-    @JoinColumn(name = "folder")
+    @JoinColumn(name = "folder_id")
     private Folder folder;
 
     public void modifyWord(String english, String korean){

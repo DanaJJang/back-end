@@ -37,7 +37,7 @@ public class WordServiceImpl implements WordService{
 
         wordRepository.save(
                 Word.builder()
-                        .folderId(folder.getId())
+                        .folder(folder)
                         .english(wordRequest.getEnglish())
                         .korean(wordRequest.getKorean())
                 .build()
