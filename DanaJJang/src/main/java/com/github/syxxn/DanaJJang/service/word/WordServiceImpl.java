@@ -25,7 +25,6 @@ public class WordServiceImpl implements WordService{
 
     @Override
     public void addWord(WordRequest wordRequest) {
-
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 
@@ -46,7 +45,6 @@ public class WordServiceImpl implements WordService{
 
     @Override
     public void modifyWord(Integer wordId, String english, String korean) {
-
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 
@@ -58,7 +56,6 @@ public class WordServiceImpl implements WordService{
 
     @Override
     public void deleteWord(Integer wordId) {
-
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 

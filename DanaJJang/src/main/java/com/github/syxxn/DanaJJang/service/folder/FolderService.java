@@ -5,6 +5,7 @@ import com.github.syxxn.DanaJJang.payload.response.WordListResponse;
 import org.springframework.data.domain.Pageable;
 
 public interface FolderService {
+    void addFolder(String name);
     FolderListResponse getFolder(Pageable page);
     WordListResponse getWord(Integer folderId);
     void setName(Integer folderId, String name);

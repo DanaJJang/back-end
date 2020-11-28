@@ -29,9 +29,21 @@ public class FolderServiceImpl implements FolderService{
     private final UserRepository userRepository;
     private final AuthenticationFacade authenticationFacade;
 
+
+    @Override
+    public void addFolder(String name) {
+        userRepository.findByUserId(authenticationFacade.getUserId())
+                .orElseThrow(UserNotFoundException::new);
+
+        folderRepository.save(
+                Folder.builder()
+                        .name(name)
+                        .build()
+        );
+    }
+
     @Override
     public FolderListResponse getFolder(Pageable page) {
-
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 
@@ -57,7 +69,6 @@ public class FolderServiceImpl implements FolderService{
 
     @Override
     public WordListResponse getWord(Integer folderId){
-
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 
@@ -82,7 +93,6 @@ public class FolderServiceImpl implements FolderService{
 
     @Override
     public void setName(Integer folderId, String name) {
-
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 

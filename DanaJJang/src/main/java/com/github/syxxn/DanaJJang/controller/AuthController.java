@@ -7,8 +7,6 @@ import com.github.syxxn.DanaJJang.service.auth.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/auth")
@@ -17,7 +15,7 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping
-    public TokenResponse signIn(@RequestBody @Valid SignInRequest request) {
+    public TokenResponse signIn(@RequestBody SignInRequest request) {
         return authService.signIn(request);
     }
 

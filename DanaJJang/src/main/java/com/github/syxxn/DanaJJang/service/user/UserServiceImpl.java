@@ -20,10 +20,10 @@ public class UserServiceImpl implements UserService{
         String id = signUpRequest.getUserId();
         String password = signUpRequest.getPassword();
 
-        userRepository.findByUserId(id)
-                .ifPresent(user->{
+        userRepository.findByUserId(id) .ifPresent(user->{
                  throw new UserAlreadyExistsException();
-                });
+        });
+
         userRepository.save(
                 User.builder()
                         .userId(id)

@@ -1,7 +1,7 @@
 package com.github.syxxn.DanaJJang.service.auth;
 
-import com.github.syxxn.DanaJJang.entity.refreshtoken.RefreshToken;
 import com.github.syxxn.DanaJJang.entity.refreshtoken.RefreshTokenRepository;
+import com.github.syxxn.DanaJJang.entity.user.User;
 import com.github.syxxn.DanaJJang.entity.user.UserRepository;
 import com.github.syxxn.DanaJJang.exception.InvalidTokenException;
 import com.github.syxxn.DanaJJang.exception.UserNotFoundException;
@@ -33,15 +33,14 @@ public class AuthServiceImpl implements AuthService{
 
    @Override
     public TokenResponse signIn(SignInRequest signInRequest){
-      return userRepository.findByUserId(signInRequest.getUserId())
-              .filter(user -> passwordEncoder.matches(signInRequest.getPassword(), user.getPassword()))
-              .map(user -> {
-                 String accessToken = tokenProvider.generateAccessToken(user.getUserId());
-                 String refreshToken = tokenProvider.generateRefreshToken(user.getUserId());
-                 refreshTokenService.save(new RefreshToken(user.getUserId(), refreshToken, refreshExp));
-                 return new TokenResponse(accessToken, refreshToken);
-              })
-              .orElseThrow(UserNotFoundException::new);
+       User user = userRepository.findByUserId(signInRequest.getUserId())
+               .filter(u -> passwordEncoder.matches(signInRequest.getPassword(), u.getPassword()))
+               .orElseThrow(UserNotFoundException::new);
+
+       String accessToken = jwtTokenProvider.generateAccessToken(user.getUserId());
+       String refreshToken = jwtTokenProvider.generateRefreshToken(user.getUserId());
+
+       return new TokenResponse(accessToken, refreshToken);
    }
     @Override
     public AccessTokenResponse refreshToken(String receivedToken) {

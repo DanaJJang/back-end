@@ -15,6 +15,11 @@ public class FolderController {
 
     private final FolderService folderService;
 
+    @PostMapping
+    public void addFolder(@RequestBody String name) {
+        folderService.addFolder(name);
+    }
+
     @GetMapping
     public FolderListResponse getFolder(Pageable page){
         return folderService.getFolder(page);
