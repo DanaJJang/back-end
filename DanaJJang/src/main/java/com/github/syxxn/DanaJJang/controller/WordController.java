@@ -3,6 +3,7 @@ package com.github.syxxn.DanaJJang.controller;
 import com.github.syxxn.DanaJJang.payload.request.WordRequest;
 import com.github.syxxn.DanaJJang.service.word.WordService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,11 +14,13 @@ public class WordController {
     private final WordService wordService;
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public void addWord(@RequestBody WordRequest wordRequest){
         wordService.addWord(wordRequest);
     }
 
     @PutMapping("/{wordId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void modifyWord(@PathVariable Integer wordId,
                            @RequestParam String english,
                            @RequestParam String korean){
@@ -25,6 +28,7 @@ public class WordController {
     }
 
     @DeleteMapping("/{wordId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteWord(@PathVariable Integer wordId){
         wordService.deleteWord(wordId);
     }

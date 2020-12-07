@@ -5,6 +5,7 @@ import com.github.syxxn.DanaJJang.payload.response.WordListResponse;
 import com.github.syxxn.DanaJJang.service.folder.FolderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -31,6 +32,7 @@ public class FolderController {
     }
 
     @PutMapping("/{folderId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void setName(@PathVariable Integer folderId,
                         @RequestParam String name){
         folderService.setName(folderId, name);
