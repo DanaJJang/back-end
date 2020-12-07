@@ -12,12 +12,7 @@ public class AuthenticationFacade {
     }
 
     public String getUserId() {
-        Authentication auth = this.getAuthentication();
-        if (auth.getPrincipal() instanceof AuthDetails) {
-            return ((AuthDetails) auth.getPrincipal()).getUser().getUserId();
-        } else {
-            return this.getAuthentication().getName();
-        }
+        return this.getAuthentication().getName();
     }
 
 }
