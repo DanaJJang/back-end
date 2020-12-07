@@ -28,7 +28,6 @@ public class WordController {
     }
 
     @DeleteMapping("/{wordId}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteWord(@PathVariable Integer wordId){
         wordService.deleteWord(wordId);
     }

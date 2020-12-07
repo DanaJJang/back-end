@@ -5,7 +5,6 @@ import com.github.syxxn.DanaJJang.payload.response.AccessTokenResponse;
 import com.github.syxxn.DanaJJang.payload.response.TokenResponse;
 import com.github.syxxn.DanaJJang.service.auth.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,7 +15,6 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping
-    @ResponseStatus(HttpStatus.OK)
     public TokenResponse signIn(@RequestBody SignInRequest request) {
         return authService.signIn(request);
     }

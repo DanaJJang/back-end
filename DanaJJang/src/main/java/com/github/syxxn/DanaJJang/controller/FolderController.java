@@ -17,6 +17,7 @@ public class FolderController {
     private final FolderService folderService;
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public void addFolder(@RequestBody String name) {
         folderService.addFolder(name);
     }

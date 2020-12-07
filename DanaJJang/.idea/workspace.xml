@@ -24,17 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="512fd23c-1965-4b2a-bab8-8a04c9284579" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/FolderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/FolderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/WordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/WordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/JwtConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/JwtConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/JwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/JwtTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/auth/AuthDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/auth/AuthDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/auth/AuthDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/auth/AuthDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/auth/AuthenticationFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/security/auth/AuthenticationFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/service/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/service/user/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,38 +285,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607349717261" />
-    <state width="912" height="225" key="GridCell.Tab.0.bottom" timestamp="1607350555277">
+    <state width="912" height="346" key="GridCell.Tab.0.bottom" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="225" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607350555277" />
-    <state width="912" height="225" key="GridCell.Tab.0.center" timestamp="1607350555277">
+    <state width="912" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
+    <state width="912" height="346" key="GridCell.Tab.0.center" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="225" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607350555277" />
-    <state width="912" height="225" key="GridCell.Tab.0.left" timestamp="1607350555277">
+    <state width="912" height="346" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
+    <state width="912" height="346" key="GridCell.Tab.0.left" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="225" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607350555277" />
-    <state width="912" height="225" key="GridCell.Tab.0.right" timestamp="1607350555277">
+    <state width="912" height="346" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
+    <state width="912" height="346" key="GridCell.Tab.0.right" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="225" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607350555277" />
-    <state width="912" height="346" key="GridCell.Tab.1.bottom" timestamp="1607349764063">
+    <state width="912" height="346" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
+    <state width="912" height="346" key="GridCell.Tab.1.bottom" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607349764063" />
-    <state width="912" height="346" key="GridCell.Tab.1.center" timestamp="1607349764063">
+    <state width="912" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
+    <state width="912" height="346" key="GridCell.Tab.1.center" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607349764063" />
-    <state width="912" height="346" key="GridCell.Tab.1.left" timestamp="1607349764063">
+    <state width="912" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
+    <state width="912" height="346" key="GridCell.Tab.1.left" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607349764063" />
-    <state width="912" height="346" key="GridCell.Tab.1.right" timestamp="1607349764063">
+    <state width="912" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
+    <state width="912" height="346" key="GridCell.Tab.1.right" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607349764063" />
+    <state width="912" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
     <state x="154" y="0" key="SettingsEditor" timestamp="1607350269398">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
