@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService{
@@ -20,9 +22,10 @@ public class UserServiceImpl implements UserService{
         String id = signUpRequest.getUserId();
         String password = signUpRequest.getPassword();
 
-        userRepository.findByUserId(id) .ifPresent(user->{
-                 throw new UserAlreadyExistsException();
-        });
+        Optional<User> user = userRepository.findByUserId(id);
+
+        if(user.isPresent())
+            throw new UserAlreadyExistsException();
 
         userRepository.save(
                 User.builder()
