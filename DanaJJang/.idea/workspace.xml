@@ -23,8 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="512fd23c-1965-4b2a-bab8-8a04c9284579" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/WordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/syxxn/DanaJJang/controller/WordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,10 +284,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1170" y="270" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605531314828" />
-    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1607349717261">
+    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1607573655872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607349717261" />
+    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607573655872" />
     <state width="912" height="346" key="GridCell.Tab.0.bottom" timestamp="1607351680171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -317,10 +320,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="912" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607351680171" />
-    <state x="154" y="0" key="SettingsEditor" timestamp="1607350269398">
+    <state x="204" y="94" key="SettingsEditor" timestamp="1607573665877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="154" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607350269398" />
+    <state x="204" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607573665877" />
     <state x="0" y="176" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606376228918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

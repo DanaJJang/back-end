@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/user")
@@ -15,7 +17,7 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void signUp(@RequestBody SignUpRequest signUpRequest){
+    public void signUp(@RequestBody @Valid SignUpRequest signUpRequest){
         userService.signUp(signUpRequest);
     }
 

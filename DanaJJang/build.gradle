@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.github.syxxn'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
 	compileOnly {
@@ -27,6 +27,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'it.ozimov:embedded-redis:0.7.3'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 	compile 'org.springframework.security:spring-security-web:4.2.2.RELEASE'
 	compile 'org.springframework.security:spring-security-config:4.2.2.RELEASE'
