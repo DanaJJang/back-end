@@ -68,16 +68,18 @@ public class FolderServiceImpl implements FolderService{
     }
 
     @Override
-    public WordListResponse getWord(Integer folderId){
+    public WordListResponse getWord(Integer folderId, Pageable page){
         userRepository.findByUserId(authenticationFacade.getUserId())
                 .orElseThrow(UserNotFoundException::new);
 
         folderRepository.findById(folderId)
                 .orElseThrow(FolderNotFoundException::new);
 
+        Page<Word> wordPage = wordRepository.findAllByFolderId(folderId,page);
+
         List<WordResponse> wordResponses = new ArrayList<>();
 
-        for(Word word : wordRepository.findAllByFolderId(folderId)){
+        for(Word word : wordPage){
             wordResponses.add(
                     WordResponse.builder()
                             .english(word.getEnglish())
@@ -87,6 +89,8 @@ public class FolderServiceImpl implements FolderService{
         }
 
         return WordListResponse.builder()
+                .totalElements(wordPage.getNumberOfElements())
+                .totalPages(wordPage.getTotalPages())
                 .wordResponses(wordResponses)
                 .build();
     }

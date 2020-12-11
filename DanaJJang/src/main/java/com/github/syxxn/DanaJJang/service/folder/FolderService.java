@@ -7,6 +7,6 @@ import org.springframework.data.domain.Pageable;
 public interface FolderService {
     void addFolder(String name);
     FolderListResponse getFolder(Pageable page);
-    WordListResponse getWord(Integer folderId);
+    WordListResponse getWord(Integer folderId, Pageable page);
     void setName(Integer folderId, String name);
 }

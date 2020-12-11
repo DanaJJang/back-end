@@ -28,8 +28,8 @@ public class FolderController {
     }
 
     @GetMapping("/{folderId}")
-    public WordListResponse getWord(@PathVariable Integer folderId){
-        return folderService.getWord(folderId);
+    public WordListResponse getWord(@PathVariable Integer folderId, Pageable page){
+        return folderService.getWord(folderId, page);
     }
 
     @PutMapping("/{folderId}")
