@@ -60,7 +60,7 @@ public class UserControllerTest {
         mvc.perform(post("/user").content(new ObjectMapper()
                 .writeValueAsString(request))
                 .contentType(MediaType.APPLICATION_JSON_VALUE))
-                .andExpect(status().isOk()).andDo(print());
+                .andExpect(status().isCreated()).andDo(print());
     }
 
 
