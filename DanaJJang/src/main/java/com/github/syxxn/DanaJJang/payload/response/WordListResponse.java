@@ -9,6 +9,10 @@ import java.util.List;
 @Builder
 public class WordListResponse {
 
-    private List wordResponses;
+    private int totalElements;
+
+    private int totalPages;
+
+    private List<WordResponse> wordResponses;
 
 }
