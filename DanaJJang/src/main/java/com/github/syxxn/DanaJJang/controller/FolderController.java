@@ -1,0 +1,42 @@
+package com.github.syxxn.DanaJJang.controller;
+
+import com.github.syxxn.DanaJJang.payload.response.FolderListResponse;
+import com.github.syxxn.DanaJJang.payload.response.WordListResponse;
+import com.github.syxxn.DanaJJang.service.folder.FolderService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/folder")
+public class FolderController {
+
+    private final FolderService folderService;
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void addFolder(@RequestBody String name) {
+        folderService.addFolder(name);
+    }
+
+    @GetMapping
+    public FolderListResponse getFolder(Pageable page){
+        return folderService.getFolder(page);
+    }
+
+    @GetMapping("/{folderId}")
+    public WordListResponse getWord(@PathVariable Integer folderId, Pageable page){
+        return folderService.getWord(folderId, page);
+    }
+
+    @PutMapping("/{folderId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void setName(@PathVariable Integer folderId,
+                        @RequestParam String name){
+        folderService.setName(folderId, name);
+    }
+
+}
