@@ -102,26 +102,27 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\test\resources" />
-      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang\exception" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.syxxn.DanaJJang.config.redis" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\test" />
       <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\test\java\com\github\syxxn\DanaJJang" />
       <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang\entity" />
       <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang\service\refreshtoken" />
       <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.syxxn.DanaJJang.config.redis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\resources" />
+      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\test\resources" />
+      <recent name="C:\Users\user\Desktop\back-end\DanaJJang\src\main\java\com\github\syxxn\DanaJJang\exception" />
     </key>
   </component>
   <component name="RunManager" selected="Application.DanaJJangApplication">
@@ -256,10 +257,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="618" y="124" key="#Project_Structure" timestamp="1609950582662">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="618" y="124" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1609950582662" />
     <state x="1053" y="100" width="774" height="847" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605529805738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1053" y="100" width="774" height="847" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605529805738" />
+    <state x="894" y="348" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609950680351">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="894" y="348" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1609950680351" />
     <state x="457" y="227" key="#com.intellij.ide.util.MemberChooser" timestamp="1607646653846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -284,22 +293,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607573655872" />
-    <state width="912" height="417" key="GridCell.Tab.0.bottom" timestamp="1607772730589">
+    <state width="912" height="417" key="GridCell.Tab.0.bottom" timestamp="1609950587001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="417" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607772730589" />
-    <state width="912" height="417" key="GridCell.Tab.0.center" timestamp="1607772730589">
+    <state width="912" height="417" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609950587001" />
+    <state width="912" height="417" key="GridCell.Tab.0.center" timestamp="1609950587001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="417" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607772730589" />
-    <state width="912" height="417" key="GridCell.Tab.0.left" timestamp="1607772730589">
+    <state width="912" height="417" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609950587001" />
+    <state width="912" height="417" key="GridCell.Tab.0.left" timestamp="1609950587001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="417" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607772730589" />
-    <state width="912" height="417" key="GridCell.Tab.0.right" timestamp="1607772730589">
+    <state width="912" height="417" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609950587001" />
+    <state width="912" height="417" key="GridCell.Tab.0.right" timestamp="1609950587001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="912" height="417" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607772730589" />
+    <state width="912" height="417" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609950587001" />
     <state width="912" height="470" key="GridCell.Tab.1.bottom" timestamp="1607770525699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
